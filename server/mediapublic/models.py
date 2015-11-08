@@ -451,8 +451,8 @@ class People(Base, CreationMixin, TimeStampMixin):
             facebook=self.facebook,
             instagram=self.instagram,
             periscope=self.periscope,
-            user_id=self.user_id,
-            organization_id=self.organization_id,
+            user_id=str(self.user_id),
+            organization_id=str(self.organization_id),
         )
         return resp
 
@@ -473,7 +473,7 @@ class Recordings(Base, CreationMixin, TimeStampMixin):
     id = Column(UUIDType(binary=False), primary_key=True)
     title = Column(UnicodeText, nullable=False)
     url = Column(UnicodeText, nullable=False)
-    recorded_datetime = Column(DateTime, nullable=False)
+    recorded_datetime = Column(DateTime)
 
     organization_id = Column(ForeignKey('organizations.id'))
 
