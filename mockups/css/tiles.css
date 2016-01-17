@@ -70,6 +70,15 @@
 	bottom: 1em;
 }
 
+/* ORGANIZATIONS */
+.orgs .one p {
+	font-size: 30px;
+}
+
+.orgs .one p.more {
+	font-size: 13px;
+}
+
 /* PEOPLE */
 .people .tile {
 	padding: 0;
